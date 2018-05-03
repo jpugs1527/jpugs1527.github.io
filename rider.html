@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ride Request</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+        <link rel="stylesheet" type="text/css" href="menu.css">
+    </head>
+    <body>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="login.html">Login</a>
+                <a href="tuCampusMap.jpg">TU Campus Map</a>
+            </div>
+        </div>
+
+        <div class="login-page">
+            <div class="form">
+                <form class="login-form" method="get" action="Ride.html">
+
+                    <form class="register-form" method="get" action="LoginChoice.html">
+                        <input type="text" placeholder="First Name"/>
+                        <input type="text" placeholder="Last Name"/>
+                        Pick-up Location<select id="PickUpLocation">
+                            <option value="YRB">York Road Building</option>
+                            <option value="TWR">Towers</option>
+                            <option value="WV">West Village Dorms</option>
+                            <option value="BURDICK">Burdick</option>
+                            <option value="LA">Language Arts</option>
+                            <option value="CFA">Fine Arts</option>
+                            <option value="UNION">Union</option>
+                            <option value="SECU">Secu Arena</option>
+                            <option value="OTHER">OTHER</option>
+                        </select>
+                        Drop-Off Location<select id="DropOffLocation">
+                            <option value="YRB">York Road Building</option>
+                            <option value="TWR">Towers</option>
+                            <option value="WV">West Village Dorms</option>
+                            <option value="BURDICK">Burdick</option>
+                            <option value="LA">Language Arts</option>
+                            <option value="CFA">Fine Arts</option>
+                            <option value="UNION">Union</option>
+                            <option value="SECU">Secu Arena</option>
+                            <option value="OTHER">OTHER</option>
+                        </select>
+
+                        <input type="text" placeholder="Time"/>
+                        <button type="submit" onclick='clickAlert()'>Submit</button>
+                    </form>
+
+            </div>
+        </div>
+
+        <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+
+        <script>
+                            function clickAlert() {
+                                alert("Request Submitted!");
+                            }
+                            $('.message a').click(function () {
+                                $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+                            })
+        </script>
+
+    </body>
+</html>

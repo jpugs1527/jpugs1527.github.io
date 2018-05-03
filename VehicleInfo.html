@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Drive with TU Ride</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class='container'>
+
+            <form method ="get" action="results.html"> 
+                <!--Request Ride fieldset*\-->
+                <fieldset id="CarInfo">
+                    <label>Car Information</label> <br />
+                    Year <input type="text" id= "fNameB" name="fName">
+                    <br/>
+                    Vehicle Make <select id="VehicleMake">
+                        <option value="AUDI">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="CHEVY">Chevrolet</option>
+                        <option value="DODGE">Dodge</option>
+                        <option value="FERRARI">Ferrari</option>
+                        <option value="HONDA">Honda</option>
+                        <option value="JEEP">Jeep</option>
+                        <option value="LEXUS">Lexus</option> 
+                        <option value="OTHER">OTHER</option> 
+                    </select>
+                    If Other Specify: <input type="text" id="VehicleMake" name="VehicleMake">
+                    <br/>
+                </fieldset>           
+            </form>
+            <form>
+                <button type="submit" onclick="vehicleClickAlert()">Enter Vehicle Information</button>
+            </form>
+            <script>
+                function vehicleClickAlert() {
+                    alert("Vehicle Information Submitted");
+                }
+            </script>
+        </div>   
+    </body>
+</html>
