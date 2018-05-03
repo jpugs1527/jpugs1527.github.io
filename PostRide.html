@@ -1,71 +1,77 @@
-<html>
-   <head>
-      <title>Post a Ride</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
 
-   </head>
-   
-   <body>
-      <div class='container'>
-      
-      <form method ="get" action="results.html"> 
-            <!--Post Ride fieldset*\-->
-            <fieldset id="RidePost">
-               <label>Request Ride</label> <br />
-               First name <input type="text" id= "fNameB" name="fName">
-               Last name <input type="text" id = "lNameB" name="lname">
-               <br />
-               Class Location<select id="PickUpLocation">
-                  <option value="YRB">York Road Building</option>
-                  <option value="TWR">Towers</option>
-                  <option value="WV">West Village Dorms</option>
-                  <option value="BURDICK">Burdick</option>
-                  <option value="LA">Language Arts</option>
-                  <option value="CFA">Fine Arts</option>
-                  <option value="UNION">Union</option>
-                  <option value="SECU">Secu Arena</option> 
-                  <option value="OTHER">OTHER</option> 
-               </select>
-               
-               If Other Specify: <input type="text" id ="PickUpOtherLocation" name="PickUpOtherLocation">
-               <br />
-               
-               Check all locations you are willing to go to:<br />
-               <input type="checkbox" id= "CheckYRB" name="CheckYRB"> York Road Building  <br />
-               <input type="checkbox" id= "CheckTWR" name="CheckTWR"> Towers <br />
-               <input type="checkbox" id= "ChecKWV" name="CheckWV"> West Village <br />
-               <input type="checkbox" id= "CheckBURDICK" name="CheckBURDICK"> Burdick<br />
-               <input type="checkbox" id= "CheckLA" name="CheckLA"> Language Arts  <br />
-               <input type="checkbox" id= "CheckCFA" name="CheckCFA"> College of Fine Arts <br />
-               <input type="checkbox" id= "CheckUNION" name="CheckUNION"> Union <br />
-               <input type="checkbox" id= "CheckSECU" name="CheckSECU"> Secu Arena <br />
-               
-               Final Location <select id="DropOffLocation">
-                  <option value="YRB">York Road Building</option>
-                  <option value="TWR">Towers</option>
-                  <option value="WV">West Village Dorms</option>
-                  <option value="BURDICK">Burdick</option>
-                  <option value="LA">Language Arts</option>
-                  <option value="CFA">Fine Arts</option>
-                  <option value="UNION">Union</option>
-                  <option value="SECU">Secu Arena</option> 
-                  <option value="OTHER">OTHER</option> 
-               </select>   
-               If Other Specify: <input type="text" id="DropOffOtherLocation" name="DropOffOtherLocation">
-               <br />
-               Time <input id="time" type="time" name="time">  
-               <br />
-            </fieldset>           
-         </form>
-          <form>
-            <button type="submit" onclick="clickAlert()">Post Ride</button>
-        </form>
+<html>
+    <head>
+        <title>Ride Request</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+        <link rel="stylesheet" type="text/css" href="menu.css">
+    </head>
+    <body>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="Login.html">Login</a>
+                <a href="tuCampusMap.jpg">TU Campus Map</a>
+            </div>
+        </div>
+
+        <div class="login-page">
+            <div class="form">
+                <form class="login-form" method="get" action="Drive.html">
+
+                    <form class="register-form" method="get" action="LoginChoice.html">
+                        <input type="text" placeholder="First Name"/>
+                        <input type="text" placeholder="Last Name"/>
+                        Class Location<select id="PickUpLocation">
+                            <option value="YRB">York Road Building</option>
+                            <option value="TWR">Towers</option>
+                            <option value="WV">West Village Dorms</option>
+                            <option value="BURDICK">Burdick</option>
+                            <option value="LA">Language Arts</option>
+                            <option value="CFA">Fine Arts</option>
+                            <option value="UNION">Union</option>
+                            <option value="SECU">Secu Arena</option> 
+                            <option value="OTHER">OTHER</option> 
+                        </select>
+                        Check all locations you are willing to go to:<br />
+                        <input type="checkbox" id= "CheckYRB" name="CheckYRB"> York Road Building  <br />
+                        <input type="checkbox" id= "CheckTWR" name="CheckTWR"> Towers <br />
+                        <input type="checkbox" id= "ChecKWV" name="CheckWV"> West Village <br />
+                        <input type="checkbox" id= "CheckBURDICK" name="CheckBURDICK"> Burdick<br />
+                        <input type="checkbox" id= "CheckLA" name="CheckLA"> Language Arts  <br />
+                        <input type="checkbox" id= "CheckCFA" name="CheckCFA"> College of Fine Arts <br />
+                        <input type="checkbox" id= "CheckUNION" name="CheckUNION"> Union <br />
+                        <input type="checkbox" id= "CheckSECU" name="CheckSECU"> Secu Arena <br />
+                        Final Location<select id="DropOffLocation">
+                            <option value="YRB">York Road Building</option>
+                            <option value="TWR">Towers</option>
+                            <option value="WV">West Village Dorms</option>
+                            <option value="BURDICK">Burdick</option>
+                            <option value="LA">Language Arts</option>
+                            <option value="CFA">Fine Arts</option>
+                            <option value="UNION">Union</option>
+                            <option value="SECU">Secu Arena</option>
+                            <option value="OTHER">OTHER</option>
+                        </select>
+
+                        <input type="text" placeholder="Time"/>
+                        <button type="submit" onclick='clickAlert()'>Submit</button>
+                    </form>
+
+            </div>
+        </div>
+
+        <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+
         <script>
-            function clickAlert() {
-                alert("Ride Posted!");
-            }
+                            function clickAlert() {
+                                alert("Ride Posted!");
+                            }
+                            $('.message a').click(function () {
+                                $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+                            })
         </script>
-      </div>   
-   </body>
+
+    </body>
 </html>
